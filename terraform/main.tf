@@ -10,7 +10,6 @@ module "ec2_instance" { #module ec2_instance (setings for provider)
   ami                    = "ami-0a6b2839d44d781b2"
   instance_type          = "t2.micro"
   key_name               = "Key_TF" #key_name which create
-  monitoring             = true
   vpc_security_group_ids = [aws_security_group.my_security_group.id] #security group for this machine
 
   tags = {
